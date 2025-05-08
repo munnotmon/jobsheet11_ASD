@@ -11,8 +11,7 @@ public class mahasiswa12 {
     public void tampilkanData() {
         System.out.println(nim + " - " + nama + " - " + prodi + " - " + kelas);
     }
-
-    
 }
 
+//commit
 
