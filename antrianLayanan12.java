@@ -86,6 +86,15 @@ public class antrianLayanan12{
             size--;
             return mhs;
     }
+
+    public void lihatAkhir() {
+        if (IsEmpty()) {
+            System.out.println("Antrian kosong.");
+        } else {
+            System.out.println("Mahasiswa di antrian paling belakang:");
+            System.out.println("NIM - Nama - Prodi - Kelas");
+            data[rear].tampilkanData();
+        }
+    }    
 }
 
-//commit

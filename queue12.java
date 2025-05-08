@@ -59,41 +59,34 @@ public class queue12{
 
     public void Enqueue (int dt) {
         if (IsFull()) {
-            System.out.println("Queue sudah penuh");
+            System.out.println("Queue sudah penuh. Program dihentikan.");
+            System.exit(0);
         } else {
             if (IsEmpty()) {
                 front = rear = 0;
             } else {
-                if (rear == max - 1) {
-                    rear = 0;
-                } else {
-                    rear++;
-                }
+                rear = (rear + 1) % max;
             }
             data[rear] = dt;
             size++;
         }
-    }
+    }    
 
     public int Dequeue() {
         int dt = 0;
         if (IsEmpty()) {
-            System.out.println("Queue masih kosong");
+            System.out.println("Queue masih kosong. Program dihentikan.");
+            System.exit(0);
         } else {
             dt = data[front];
             size--;
             if (IsEmpty()) {
-                front = rear = - 1;
+                front = rear = -1;
             } else {
-                if (front == max - 1) {
-                    front = 0;
-                } else {
-                    front++;
-                }
+                front = (front + 1) % max;
             }
         }
         return dt;
-    }
+    }    
 }
 
-//commit
